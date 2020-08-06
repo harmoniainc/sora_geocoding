@@ -60,6 +60,19 @@ SoraGeocoding.coordinates('東京都', {site: 'yahoo', yahoo_appid: 'xxxxxxxxx'}
 => {:site=>"yahoo", :coordinates=>{:lat=>"35.64657460", :lon=>"139.65324950"}}
 ```
 
+### Some Options
+| option       | Description                              | Default        |
+|:------------:|:-----------------------------------------|:---------------|
+| timeout      | timeout (secs)                           | 3              |
+| http_headers | HTTP headers                             | {}             |
+| use_https    | use HTTPS for requests?                  | false          |
+| http_proxy   | HTTP proxy server (user:pass@host:port)  | nil            |
+| https_proxy  | HTTPS proxy server (user:pass@host:port) | nil            |
+| basic_auth   | user and password for basic auth ({:user => "user", :password => "password"}) | {} |
+| site         | Specify 'geocoding' or 'yahoo'           | nil            |
+| yahoo_appid  | API key for Yahoo Geocoder API           | nil            |
+| logger_level | log level, if kernel logger is used      | ::Logger::WARN |
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
