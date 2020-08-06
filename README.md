@@ -68,6 +68,7 @@ SoraGeocoding.coordinates('東京都', {site: 'yahoo', yahoo_appid: 'xxxxxxxxx'}
 | site         | Specify 'geocoding' or 'yahoo'           | nil            |
 | yahoo_appid  | API key for Yahoo Geocoder API           | nil            |
 | logger_level | log level, if kernel logger is used      | ::Logger::WARN |
+| always_raise | Always handle errors. ex) :all, SocketError, Timeout::Error | [] |
 
 ## Development
 
