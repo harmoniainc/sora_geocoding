@@ -11,8 +11,8 @@ module SoraGeocoding
     REFINED_RANGE = [[-90, 90], [-180, 180]].freeze
 
     def initialize(lat, lon)
-      @lat = lat
-      @lon = lon
+      @lat = lat.to_s
+      @lon = lon.to_s
     end
 
     def encode
