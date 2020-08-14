@@ -56,6 +56,13 @@ SoraGeocoding.coordinates('東京都', {site: 'yahoo', yahoo_appid: 'xxxxxxxxx'}
 => {:site=>"yahoo", :coordinates=>{:lat=>"35.64657460", :lon=>"139.65324950"}}
 ```
 
+### Geohash
+- Specify the latitude and longitude
+```
+SoraGeocoding.geohash("35.676192", "139.650311")
+=> "xn76cydkbh5h"
+```
+
 ### Some Options
 | option       | Description                              | Default        |
 |:------------:|:-----------------------------------------|:---------------|
@@ -92,3 +99,4 @@ Everyone interacting in the SoraGeocoding project’s codebases, issue trackers,
 
 ## Reference
 - https://github.com/alexreisner/geocoder
+- https://github.com/masuidrive/pr_geohash

@@ -6,6 +6,7 @@ require 'sora_geocoding/base'
 require 'sora_geocoding/query'
 require 'sora_geocoding/url'
 require 'sora_geocoding/request'
+require 'sora_geocoding/geohash'
 require 'sora_geocoding/results/geocoding'
 require 'sora_geocoding/results/yahoo_geocoder'
 
@@ -30,6 +31,14 @@ module SoraGeocoding
     return if results.nil?
 
     { site: results[:site], coordinates: site_specific_coordinates(results[:site], results[:data]) }
+  end
+
+  #
+  # Generate a Geohash from latitude and longitude.
+  #
+  def self.geohash(latitude, longitude)
+    geohash = Geohash.new(latitude, longitude)
+    geohash.encode
   end
 
   class << self
