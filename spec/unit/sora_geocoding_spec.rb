@@ -95,4 +95,18 @@ RSpec.describe SoraGeocoding do
       end
     end
   end
+
+  describe '.geohash' do
+    context 'when latitude 33.333333333 and longitude 133.3333333' do
+      let!(:lat) { '33.33333333' }
+      let!(:lon) { '133.33333333' }
+      before do
+        @exec = subject.send(:geohash, lat, lon)
+      end
+
+      it 'is returned "wvyvdh4kezeh".' do
+        expect(@exec).to eq('wvyvdh4kezeh')
+      end
+    end
+  end
 end
