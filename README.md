@@ -1,4 +1,5 @@
 # SoraGeocoding
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)　[![Gem Version](https://badge.fury.io/rb/sora_geocoding.svg)](https://badge.fury.io/rb/sora_geocoding) 
 
 ## Installation
 
